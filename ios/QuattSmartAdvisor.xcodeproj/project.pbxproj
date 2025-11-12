@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		803A81BB2EC4A1C3003B69FF /* SmartAdvisorBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A81BA2EC4A1C3003B69FF /* SmartAdvisorBridge.swift */; };
 		803A81BE2EC4A1ED003B69FF /* SmartAdvisorBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 803A81BD2EC4A1ED003B69FF /* SmartAdvisorBridge.m */; };
+		803A81CD2EC4C068003B69FF /* QuattHeatAdvisorTextClassifierModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 803A81CC2EC4C068003B69FF /* QuattHeatAdvisorTextClassifierModel.mlmodel */; };
+		803A81CF2EC4D042003B69FF /* TestML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A81CE2EC4D03C003B69FF /* TestML.swift */; };
+		803A81D12EC4D2A7003B69FF /* intentClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A81D02EC4D2A0003B69FF /* intentClassifier.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +31,16 @@
 		803A81BA2EC4A1C3003B69FF /* SmartAdvisorBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAdvisorBridge.swift; sourceTree = "<group>"; };
 		803A81BC2EC4A1EC003B69FF /* QuattSmartAdvisor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuattSmartAdvisor-Bridging-Header.h"; sourceTree = "<group>"; };
 		803A81BD2EC4A1ED003B69FF /* SmartAdvisorBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartAdvisorBridge.m; sourceTree = "<group>"; };
+		803A81CC2EC4C068003B69FF /* QuattHeatAdvisorTextClassifierModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = QuattHeatAdvisorTextClassifierModel.mlmodel; sourceTree = "<group>"; };
+		803A81CE2EC4D03C003B69FF /* TestML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestML.swift; sourceTree = "<group>"; };
+		803A81D02EC4D2A0003B69FF /* intentClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intentClassifier.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QuattSmartAdvisor/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		803A81D22EC50CA7003B69FF /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
@@ -47,6 +57,9 @@
 		13B07FAE1A68108700A75B9A /* QuattSmartAdvisor */ = {
 			isa = PBXGroup;
 			children = (
+				803A81D22EC50CA7003B69FF /* Domain */,
+				803A81D02EC4D2A0003B69FF /* intentClassifier.swift */,
+				803A81CE2EC4D03C003B69FF /* TestML.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -55,6 +68,7 @@
 				803A81BA2EC4A1C3003B69FF /* SmartAdvisorBridge.swift */,
 				803A81BD2EC4A1ED003B69FF /* SmartAdvisorBridge.m */,
 				803A81BC2EC4A1EC003B69FF /* QuattSmartAdvisor-Bridging-Header.h */,
+				803A81CC2EC4C068003B69FF /* QuattHeatAdvisorTextClassifierModel.mlmodel */,
 			);
 			name = QuattSmartAdvisor;
 			sourceTree = "<group>";
@@ -124,6 +138,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				803A81D22EC50CA7003B69FF /* Domain */,
 			);
 			name = QuattSmartAdvisor;
 			productName = QuattSmartAdvisor;
@@ -264,7 +281,10 @@
 			files = (
 				803A81BE2EC4A1ED003B69FF /* SmartAdvisorBridge.m in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				803A81CF2EC4D042003B69FF /* TestML.swift in Sources */,
 				803A81BB2EC4A1C3003B69FF /* SmartAdvisorBridge.swift in Sources */,
+				803A81D12EC4D2A7003B69FF /* intentClassifier.swift in Sources */,
+				803A81CD2EC4C068003B69FF /* QuattHeatAdvisorTextClassifierModel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

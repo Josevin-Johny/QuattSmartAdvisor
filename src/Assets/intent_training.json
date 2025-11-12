@@ -1,0 +1,29 @@
+[
+  {"text": "How efficient is my heating?", "label": "efficiency"},
+  {"text": "Is my system working well?", "label": "efficiency"},
+  {"text": "What's my COP today?", "label": "efficiency"},
+  {"text": "My heating isn't efficient", "label": "efficiency"},
+  {"text": "Check my heating performance", "label": "efficiency"},
+  {"text": "How well is my heat pump running", "label": "efficiency"},
+  
+  {"text": "What will it cost next week?", "label": "cost"},
+  {"text": "How much did I spend?", "label": "cost"},
+  {"text": "Will heating be expensive?", "label": "cost"},
+  {"text": "Show me my savings", "label": "cost"},
+  {"text": "Predict my bill", "label": "cost"},
+  {"text": "How much will I spend on heating", "label": "cost"},
+  
+  {"text": "Should I adjust temperature?", "label": "settings"},
+  {"text": "Change my heating schedule", "label": "settings"},
+  {"text": "What temperature to set?", "label": "settings"},
+  {"text": "Optimize my settings", "label": "settings"},
+  {"text": "Help me configure heating", "label": "settings"},
+  {"text": "Adjust my thermostat", "label": "settings"},
+  
+  {"text": "What's my current status?", "label": "status"},
+  {"text": "Is my system running?", "label": "status"},
+  {"text": "Show me today's data", "label": "status"},
+  {"text": "Current heating info", "label": "status"},
+  {"text": "What's happening now", "label": "status"},
+  {"text": "Check system status", "label": "status"}
+]

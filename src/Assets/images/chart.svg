@@ -1,0 +1,32 @@
+<svg width="200" height="160" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="160" fill="#1A1F3A"/>
+  
+  <!-- Grid lines -->
+  <line x1="20" y1="120" x2="180" y2="120" stroke="#333333" stroke-width="1"/>
+  <line x1="20" y1="90" x2="180" y2="90" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="20" y1="60" x2="180" y2="60" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="20" y1="30" x2="180" y2="30" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- Y-axis -->
+  <line x1="20" y1="20" x2="20" y2="130" stroke="#666666" stroke-width="1"/>
+  
+  <!-- X-axis -->
+  <line x1="20" y1="130" x2="180" y2="130" stroke="#666666" stroke-width="1"/>
+  
+  <!-- Chart bars (representing energy usage/cost) -->
+  <rect x="35" y="100" width="15" height="30" fill="#00D9FF" opacity="0.8"/>
+  <rect x="55" y="75" width="15" height="55" fill="#00D9FF" opacity="0.8"/>
+  <rect x="75" y="60" width="15" height="70" fill="#00D9FF" opacity="0.8"/>
+  <rect x="95" y="40" width="15" height="90" fill="#00D9FF" opacity="0.8"/>
+  <rect x="115" y="50" width="15" height="80" fill="#00D9FF" opacity="0.8"/>
+  <rect x="135" y="35" width="15" height="95" fill="#00D9FF" opacity="0.8"/>
+  <rect x="155" y="55" width="15" height="75" fill="#00D9FF" opacity="0.8"/>
+  
+  <!-- Trend line -->
+  <polyline points="42,100 62,75 82,60 102,40 122,50 142,35 162,55" 
+            fill="none" stroke="#00FF88" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Labels -->
+  <text x="100" y="150" font-size="10" fill="#999999" text-anchor="middle">Energy Usage</text>
+</svg>

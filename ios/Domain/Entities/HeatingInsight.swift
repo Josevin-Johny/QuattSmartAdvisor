@@ -33,6 +33,16 @@ enum EfficiencyRating: String {
         case .veryPoor: return "red"
         }
     }
+  
+  var emoji: String {
+          switch self {
+          case .excellent: return "🌟"
+          case .good: return "✅"
+          case .average: return "⚠️"
+          case .poor: return "❌"
+          case .veryPoor: return "🔴"
+          }
+      }
     
 }
 

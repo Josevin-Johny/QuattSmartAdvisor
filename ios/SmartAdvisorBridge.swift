@@ -12,21 +12,24 @@ import SwiftUI
 @objc(SmartAdvisorModule)
 class SmartAdvisorModule: NSObject {
     
-    @objc
-    func present() {
-        DispatchQueue.main.async {
-            guard let rootVC = self.getRootViewController() else {
-                print("❌ Could not find root view controller")
-                return
-            }
-            
-            let advisorView = SmartAdvisorPlaceholder()
-            let hostingController = UIHostingController(rootView: advisorView)
-            hostingController.modalPresentationStyle = .fullScreen
-            
-            rootVC.present(hostingController, animated: true)
+  @objc
+  func present() {
+      DispatchQueue.main.async {
+          guard let rootVC = self.getRootViewController() else {
+              print("Could not find root view controller")
+              return
+          }
+          
+          // Use new SmartAdvisorView instead of placeholder
+        if #available(iOS 16.0, *) {
+          let advisorView = SmartAdvisorView()
+          let hostingController = UIHostingController(rootView: advisorView)
+          hostingController.modalPresentationStyle = .fullScreen
+          
+          rootVC.present(hostingController, animated: true)
         }
-    }
+      }
+  }
     
     private func getRootViewController() -> UIViewController? {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,

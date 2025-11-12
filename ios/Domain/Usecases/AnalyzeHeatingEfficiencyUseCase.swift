@@ -61,7 +61,7 @@ class AnalyzeHeatingEfficiencyUseCaseImpl: AnalyzeHeatingEfficiencyUseCase {
     }
     
     private func calculateGasBackupPercentage(from data: [HeatingData]) -> Double {
-        let totalHeat = data.reduce(into: 0) { $0 + $1.heatDelievered }
+        let totalHeat = data.reduce(into: 0) { $0 + $1.heatDelivered }
         let totalGas = data.reduce(0) { $0 + $1.gasBoilerUsed }
         let total = totalHeat + totalGas
         guard total > 0 else { return 0 }
@@ -113,8 +113,8 @@ class AnalyzeHeatingEfficiencyUseCaseImpl: AnalyzeHeatingEfficiencyUseCase {
         }
         
         // Temperature optimization
-        let avgRoomTemp = data.map { $0.roomTemperature }.reduce(0, +) / Double(data.count)
-        let avgOutsideTemp = data.map { $0.outsideTemperature }.reduce(0, +) / Double(data.count)
+        let avgRoomTemp = data.map { $0.roomTemp }.reduce(0, +) / Double(data.count)
+        let avgOutsideTemp = data.map { $0.outsideTemp }.reduce(0, +) / Double(data.count)
         
         if avgRoomTemp - avgOutsideTemp < 2 {
             recommendations.append(Recommendation(

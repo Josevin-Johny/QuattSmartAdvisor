@@ -40,6 +40,9 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		803A81D22EC50CA7003B69FF /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
+		803A81F22EC51ABC003B69FF /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		803A81FE2EC51CC3003B69FF /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
+		803A82082EC51D3A003B69FF /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,10 @@
 		13B07FAE1A68108700A75B9A /* QuattSmartAdvisor */ = {
 			isa = PBXGroup;
 			children = (
+				803A81FE2EC51CC3003B69FF /* Core */,
+				803A81F22EC51ABC003B69FF /* Data */,
 				803A81D22EC50CA7003B69FF /* Domain */,
+				803A82082EC51D3A003B69FF /* Presentation */,
 				803A81D02EC4D2A0003B69FF /* intentClassifier.swift */,
 				803A81CE2EC4D03C003B69FF /* TestML.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -141,6 +147,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				803A81D22EC50CA7003B69FF /* Domain */,
+				803A81F22EC51ABC003B69FF /* Data */,
+				803A81FE2EC51CC3003B69FF /* Core */,
+				803A82082EC51D3A003B69FF /* Presentation */,
 			);
 			name = QuattSmartAdvisor;
 			productName = QuattSmartAdvisor;

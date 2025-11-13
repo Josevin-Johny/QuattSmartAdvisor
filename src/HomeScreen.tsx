@@ -8,6 +8,7 @@ import {
   StyleSheet,
   SafeAreaView,
   StatusBar,
+  Image,
 } from 'react-native';
 import { NativeModules } from 'react-native';
 import { QUATT_PRODUCTS, QuattProduct } from './QuattProducts';
@@ -32,15 +33,12 @@ export default function HomeScreen() {
       activeOpacity={0.7}
     >
       <View style={styles.cardContent}>
-        {/* Icon placeholder - in real app, use images */}
-        <View style={[
-          styles.iconContainer,
-          item.available ? styles.activeIcon : styles.inactiveIcon
-        ]}>
-          <Text style={styles.iconText}>
-            {item.name.charAt(0)}
-          </Text>
-        </View>
+        {/* Product Image */}
+        <Image
+          source={item.image}
+          style={styles.productImage}
+          resizeMode="cover"
+        />
 
         <View style={styles.textContent}>
           <Text style={styles.productName}>{item.name}</Text>
@@ -65,7 +63,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="light-content" backgroundColor="#0A0E27" />
       
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Quatt Products</Text>
@@ -87,7 +85,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0A0E27', // Dark theme like Quatt app
+    backgroundColor: '#000000', // Pure black theme
   },
   header: {
     padding: 24,
@@ -108,72 +106,70 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   productCard: {
-    backgroundColor: '#1A1F3A',
-    borderRadius: 16,
+    backgroundColor: '#000000', // Pure black background
+    borderRadius: 12,
     marginBottom: 16,
     overflow: 'hidden',
+    borderWidth: 0.2,
+    borderColor: '#FFFFFF',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.8,
+    shadowRadius: 12,
+    elevation: 15, // Android shadow/3D effect
   },
   cardContent: {
     flexDirection: 'row',
-    padding: 16,
+    padding: 12,
     alignItems: 'center',
+    height: 130,
   },
-  iconContainer: {
-    width: 60,
-    height: 60,
-    borderRadius: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 16,
-  },
-  activeIcon: {
-    backgroundColor: '#00D9FF', // Quatt blue/cyan
-  },
-  inactiveIcon: {
-    backgroundColor: '#2A3048',
-  },
-  iconText: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
+  productImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 8,
+    backgroundColor: '#000000',
+    marginRight: 12,
   },
   textContent: {
     flex: 1,
+    justifyContent: 'center',
   },
   productName: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '600',
     color: '#FFFFFF',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   productDescription: {
-    fontSize: 14,
+    fontSize: 13,
     color: '#B0B0B0',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   productTagline: {
-    fontSize: 13,
-    color: '#00D9FF',
+    fontSize: 12,
+    color: '#666666',
     fontWeight: '500',
+    marginTop: 6,
   },
   badge: {
-    marginTop: 8,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+    marginTop: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     backgroundColor: 'rgba(0, 217, 255, 0.2)',
-    borderRadius: 8,
+    borderRadius: 6,
     alignSelf: 'flex-start',
   },
   badgeText: {
-    fontSize: 11,
+    fontSize: 10,
     color: '#00D9FF',
     fontWeight: '600',
   },
   arrow: {
-    marginLeft: 8,
+    paddingLeft: 8,
   },
   arrowText: {
-    fontSize: 32,
+    fontSize: 28,
     color: '#A0A0A0',
     fontWeight: '300',
   },

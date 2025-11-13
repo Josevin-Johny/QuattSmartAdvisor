@@ -8,6 +8,7 @@ export interface QuattProduct {
   tagline: string;
   available: boolean; // Smart Advisor available for this product
   icon: string; // System icon name for now
+  image: any; // Product image
 }
 
 export const QUATT_PRODUCTS: QuattProduct[] = [
@@ -17,7 +18,8 @@ export const QUATT_PRODUCTS: QuattProduct[] = [
     shortDescription: 'The most powerful hybrid heat pump.',
     tagline: 'Save up to €1,500 per year',
     available: true, // This one gets Smart Advisor
-    icon: 'flame.fill'
+    icon: 'flame.fill',
+    image: require('./Assets/images/heatpump.png'),
   },
   {
     id: 'full-electric',
@@ -25,7 +27,8 @@ export const QUATT_PRODUCTS: QuattProduct[] = [
     shortDescription: 'Completely electric heating solution',
     tagline: 'Save up to €1,800 per year',
     available: false,
-    icon: 'bolt.fill'
+    icon: 'bolt.fill',
+    image: require('./Assets/images/fullElectirc.png'),
   },
   {
     id: 'chill',
@@ -33,7 +36,8 @@ export const QUATT_PRODUCTS: QuattProduct[] = [
     shortDescription: 'Cooling like an air conditioner with a heat pump',
     tagline: 'Up to 40 m² per Chill',
     available: false,
-    icon: 'snowflake'
+    icon: 'snowflake',
+    image: require('./Assets/images/chill.png'),
   },
   {
     id: 'energy-contract',
@@ -41,7 +45,8 @@ export const QUATT_PRODUCTS: QuattProduct[] = [
     shortDescription: '100% green electricity',
     tagline: '20% cheaper energy',
     available: false,
-    icon: 'leaf.fill'
+    icon: 'leaf.fill',
+    image: require('./Assets/images/chart.png'),
   },
   {
     id: 'home-battery',
@@ -49,6 +54,7 @@ export const QUATT_PRODUCTS: QuattProduct[] = [
     shortDescription: 'The modular smart home battery',
     tagline: 'Up to €2,110 per year',
     available: false,
-    icon: 'sun.max.fill'
+    icon: 'sun.max.fill',
+    image: require('./Assets/images/homeBattery.png'),
   }
 ];
